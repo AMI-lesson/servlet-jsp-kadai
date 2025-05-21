@@ -51,38 +51,19 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
 
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("<html>\r\n");
-      out.write("    <head>\r\n");
-      out.write("        <title>Servlet/JSPの基礎を学ぼう</title>\r\n");
-      out.write("    </head>\r\n");
-      out.write("    <body>\r\n");
-      out.write("    \t");
-      out.write("\r\n");
-      out.write("        <a href=\"link?name=侍太郎\">名前「侍太郎」をServletに送信</a>\r\n");
-      out.write("\r\n");
-      out.write("\t\t");
-      out.write("\r\n");
-      out.write("        <br><br>\r\n");
-      out.write("\r\n");
-      out.write("\t\t");
-      out.write("\r\n");
-      out.write("        ");
-
-        String message = (String) request.getAttribute("message");
-        if (message != null) {
-        
-      out.write("\r\n");
-      out.write("            <p>");
-      out.print( message );
+      out.write("<head>\r\n");
+      out.write("<title>Servlet/JSPの基礎を学ぼう</title>\r\n");
+      out.write("</head>\r\n");
+      out.write("<body>\r\n");
+      out.write("   <!-- Servletへのリンク -->\r\n");
+      out.write("   <a href=\"");
+      out.print(request.getContextPath());
+      out.write("/link?name=侍太郎\">名前「侍太郎」をServletに送信</a>\r\n");
+      out.write("   <p>");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${text}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
       out.write("</p>\r\n");
-      out.write("        ");
-
-            }
-        
-      out.write("\r\n");
-      out.write("    </body>\r\n");
+      out.write("</body>\r\n");
       out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
